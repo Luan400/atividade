@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    < <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Fibonacci
+        let num = parseInt(prompt("Digite um número: "));
+
+        let fib_prev = 0; // valor anterior da sequência de Fibonacci
+        let fib_atual = 1; // valor atual da sequência de Fibonacci
+
+        while (fib_atual < num) {
+            let fib_prox = fib_prev + fib_atual; // próximo valor da sequência de Fibonacci
+            fib_prev = fib_atual;
+            fib_atual = fib_prox;
+        }
+
+        if (fib_atual === num) {
+            console.log(num + " pertence à sequência de Fibonacci.");
+        } else {
+            console.log(num + " não pertence à sequência de Fibonacci.");
+        }
+
+        //Inverter string
+
+        function inverteString(str) {
+            let novaStr = '';
+            for (let i = str.length - 1; i >= 0; i--) {
+                novaStr += str[i];
+            }
+            return novaStr;
+        }
+
+        // Exemplo de uso
+        const stringOriginal = 'hello world';
+        const stringInvertida = inverteString(stringOriginal);
+        console.log(stringInvertida); // imprime "dlrow olleh"
+    </script>
+</body>
+
+</html>
